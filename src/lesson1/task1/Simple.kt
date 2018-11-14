@@ -1,7 +1,9 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson1.task1
 
+import org.jetbrains.annotations.TestOnly
 import kotlin.math.*
+
 
 /**
  * Пример
@@ -48,8 +50,14 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main(args: Array<String>) {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
+
+    //  val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
+    //   println("Root product: $x1x2")
+    val tmp =8
+    val result = sqr(tmp)
+     println("result $tmp * $tmp = $result")
+
+
 }
 
 /**
@@ -75,8 +83,14 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+    //36.24306
 
+   val degree =deg+(min + sec/60.toDouble())/60.toDouble()
+    println("degree = $degree")
+    return degree* PI/180
+}
+//«градусы + (минуты + секунды/60)/60».
 /**
  * Тривиальная
  *
